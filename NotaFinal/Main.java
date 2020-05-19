@@ -1,6 +1,66 @@
-public class Main {
-    
-	Disciplina disciplina = new Disciplina();
-	Aluno aluno = new Aluno();
+public class Main{
 
+public static void main(String[] args){
+	int i,j;
+Disciplina disciplina = new Disciplina("scc1334");
+float notas[] = new float[3];
+notas[0] = 1;
+notas[1] = 2;
+notas[2] = 5;
+
+float notas1[] = new float[3];
+notas1[0] = 1;
+notas1[1] = 5;
+notas1[2] = 10;
+
+float notas2[] = new float[3];
+notas2[0] = 4;
+notas2[1] = 7;
+notas2[2] = 10;
+
+int adicionar_estudantes = 1;
+
+Aluno aluno1= new Aluno(10,notas);
+Aluno aluno2 = new Aluno(15,notas1);
+Aluno aluno3 = new Aluno(5,notas2);
+
+disciplina.adicionarEstudantes(aluno1);
+disciplina.adicionarEstudantes(aluno2);
+disciplina.adicionarEstudantes(aluno3);
+
+int num_alunos = disciplina.alunosMatriculados();
+
+//disciplina.imprimirEstudantesDecrescente();
+//disciplina.imprimirEstudantesMedias();
+disciplina.imprimirAprovados();
+
+/*	while(true){
+		if(adicionar_estudantes == 1){
+			aluno = new Aluno(nome,nusp,notas);
+			disciplina.adicionarEstudantes(nusp);	
+        }
+    else if(quantidade_alunos == 1){
+	    disciplina.QuantidadeAlunos();
+    }
+    else if(aprovados == 1){
+	    disciplina.QuantidadeAprovados();
+    }
+    else if(reprovados == 1){
+	    disciplina.QuantidadeReprovados();
+    }   
+    else if(lista_alunos_nusp == 1){
+	    disciplina.ListaAlunosNusp();
+    }
+    else if(lista_alunos_alfabetico == 1){
+	    disciplina.ListaAlunosAlfa();
+    }
+    else if(lista_aprovados == 1){
+	    disciplina.ListaAprovados();
+    }
+    else if(lista_reprovados == 1){
+	    disciplina.ListaReprovados();
+    }
+    }*/
+    
+}
 }
