@@ -1,0 +1,6 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "/home/mari/Desktop/SSC0620-101-2020_Engenharia_de_Software/NotaFinal/**/*.jar"
+  ]
+}
