@@ -1,7 +1,6 @@
 public class Main{
 
 public static void main(String[] args){
-	int i,j;
 Disciplina disciplina = new Disciplina("scc1334");
 float notas[] = new float[3];
 notas[0] = 11;
@@ -18,7 +17,6 @@ notas2[0] = 4;
 notas2[1] = 7;
 notas2[2] = 10;
 
-int adicionar_estudantes = 1;
 
 try{
 

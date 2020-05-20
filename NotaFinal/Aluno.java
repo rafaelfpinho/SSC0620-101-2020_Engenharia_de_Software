@@ -24,7 +24,8 @@ public class Aluno implements Comparable <Aluno>{
 
             setNusp(n_usp);
 		    setNotas(notas);
-		    setMedia(calcularMedia(notas));
+            setMedia(calcularMedia(notas));
+            setFlag(0);
 
         }
     }
@@ -58,6 +59,11 @@ public class Aluno implements Comparable <Aluno>{
     public Float getMediaFinal(){
         return this.media_final;
     }
+
+    public int getFlag(){
+        return this.flag;
+    }
+
     //calcula a media das notas
     private float calcularMedia(float notas[]){
         return (notas[0]+notas[1]+notas[2])/3;

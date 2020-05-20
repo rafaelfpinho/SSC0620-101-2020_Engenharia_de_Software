@@ -50,7 +50,7 @@ while (it.hasNext()) {
     Collections.sort(estudantes, Collections.reverseOrder());
     Iterator<Aluno> it = estudantes.iterator();
     while (it.hasNext()) {
-        System.out.println(it.next().getMedia());
+        System.out.println(it.next().getMediaFinal());
     }
     }
 
@@ -58,9 +58,9 @@ while (it.hasNext()) {
         Iterator<Aluno> it = estudantes.iterator();
         while (it.hasNext()) {
             Aluno x = it.next();
-            if(x.getMedia() >= 5.0){
+            if(x.getMediaFinal() >= 5.0){
                 System.out.print(x.getNusp()+" ");
-                System.out.println(x.getMedia());
+                System.out.println(x.getMediaFinal());
                 //System.out.print(it.next().getNotas());
             }
         }
