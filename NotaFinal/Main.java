@@ -4,7 +4,7 @@ public static void main(String[] args){
 	int i,j;
 Disciplina disciplina = new Disciplina("scc1334");
 float notas[] = new float[3];
-notas[0] = 1;
+notas[0] = 11;
 notas[1] = 2;
 notas[2] = 5;
 
@@ -20,19 +20,29 @@ notas2[2] = 10;
 
 int adicionar_estudantes = 1;
 
-Aluno aluno1= new Aluno(10,notas);
-Aluno aluno2 = new Aluno(15,notas1);
-Aluno aluno3 = new Aluno(5,notas2);
+try{
 
-disciplina.adicionarEstudantes(aluno1);
-disciplina.adicionarEstudantes(aluno2);
-disciplina.adicionarEstudantes(aluno3);
+    disciplina.adicionarEstudantes(new Aluno(1000000,notas));
 
-int num_alunos = disciplina.alunosMatriculados();
+}
+catch(IllegalArgumentException e){
+
+    System.out.println(e.getMessage());
+
+}
+//Aluno aluno1= new Aluno(1000000,notas);
+//Aluno aluno2 = new Aluno(15,notas1);
+//Aluno aluno3 = new Aluno(5,notas2);
+
+//disciplina.adicionarEstudantes(aluno2);
+//disciplina.adicionarEstudantes(aluno3);
+
+System.out.println(disciplina.alunosMatriculados());
+//int num_alunos = disciplina.alunosMatriculados();
 
 //disciplina.imprimirEstudantesDecrescente();
 //disciplina.imprimirEstudantesMedias();
-disciplina.imprimirAprovados();
+//disciplina.imprimirAprovados();
 
 /*	while(true){
 		if(adicionar_estudantes == 1){
