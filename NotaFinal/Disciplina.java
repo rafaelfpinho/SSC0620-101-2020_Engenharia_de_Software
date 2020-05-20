@@ -64,7 +64,42 @@ while (it.hasNext()) {
                 //System.out.print(it.next().getNotas());
             }
         }
+    }
 
+    public int aprovados(){
+        int quantidade = 0;
+        Iterator<Aluno> it = estudantes.iterator();
+        while (it.hasNext()) {
+            Aluno x = it.next();
+            if(x.getMedia() >= 5.0){
+                quantidade++;
+            }
+        }
+        return quantidade;
+    }
+    
+    public void imprimirReprovados(){
+        Iterator<Aluno> it = estudantes.iterator();
+            while (it.hasNext()) {
+                Aluno x = it.next();
+                if(x.getMedia() < 5.0){
+                    System.out.print(x.getNusp()+" ");
+                    System.out.println(x.getMedia());
+                    //System.out.print(it.next().getNotas());
+                }
+            }
+        }
+
+        public int reprovados(){
+            int quantidade = 0;
+            Iterator<Aluno> it = estudantes.iterator();
+            while (it.hasNext()) {
+                Aluno x = it.next();
+                if(x.getMedia() < 5.0){
+                    quantidade++;
+                }
+            }
+            return quantidade;
         }
 
     }
