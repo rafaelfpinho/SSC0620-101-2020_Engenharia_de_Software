@@ -3,7 +3,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Test.None;
 
 public class AlunoTests{
 
