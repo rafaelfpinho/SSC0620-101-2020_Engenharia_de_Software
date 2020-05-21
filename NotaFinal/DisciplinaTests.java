@@ -67,6 +67,12 @@ public class DisciplinaTests {
 
     @Test
     public void casoTeste6 (){
+        result = disciplina.setCodigo("SS0620");
+        assertEquals(invalido, result);
+    }
+
+    @Test
+    public void casoTeste7 (){
 
         float notas[] = new float[3];
         notas[0] = 8;
@@ -79,7 +85,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste7 (){
+    public void casoTeste8 (){
 
         float notas[] = new float[3];
         notas[0] = 8;
@@ -94,7 +100,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste8() {
+    public void casoTeste9 () {
         float notas[] = new float[3];
         notas[0] = 8;
         notas[1] = 5;
@@ -107,7 +113,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste9() {
+    public void casoTeste10 () {
         float notas[] = new float[3];
         notas[0] = 5;
         notas[1] = 5;
@@ -120,7 +126,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste10() {
+    public void casoTeste11 () {
         float notas[] = new float[3];
         notas[0] = 5;
         notas[1] = 5;
@@ -133,7 +139,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste11() {
+    public void casoTeste12 () {
         float notas[] = new float[3];
         notas[0] = 4;
         notas[1] = 4;
@@ -146,7 +152,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste12() {
+    public void casoTeste13 () {
         float notas[] = new float[3];
         notas[0] = 6;
         notas[1] = 6;
@@ -159,7 +165,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste13() {
+    public void casoTeste14 () {
         float notas[] = new float[3];
         notas[0] = 3;
         notas[1] = 3;
@@ -172,7 +178,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste14() {
+    public void casoTeste15 () {
         float notas[] = new float[3];
         notas[0] = 4;
         notas[1] = 4;
@@ -185,7 +191,7 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste15() {
+    public void casoTeste16 () {
         float notas[] = new float[3];
         notas[0] = 10;
         notas[1] = 9;
@@ -198,13 +204,13 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste16() {
+    public void casoTeste17 () {
         disciplina.imprimirReprovados( );
         assertEquals("", outContent.toString( ));
     }
 
     @Test
-    public void casoTeste17() {
+    public void casoTeste18 () {
         float notas[] = new float[3];
         notas[0] = 10;
         notas[1] = 10;
@@ -217,19 +223,19 @@ public class DisciplinaTests {
     }
 
     @Test
-    public void casoTeste18() {
+    public void casoTeste19 () {
         disciplina.imprimirEstudantesDecrescente();
         assertEquals("", outContent.toString( ));
     }
 
     @Test
-    public void casoTeste19() {
+    public void casoTeste20 () {
         disciplina.imprimirEstudantesMedias( );
         assertEquals("", outContent.toString( ));
     }
 
     @Test
-    public void casoTeste20() {
+    public void casoTeste21 () {
         disciplina.imprimirAprovados( );
         assertEquals("", outContent.toString( ));
     }
