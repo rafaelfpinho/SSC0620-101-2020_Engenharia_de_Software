@@ -9,10 +9,9 @@ public class Aluno implements Comparable <Aluno>{
     private float notas[];
     private float media_final;
     private int flag; //indica qual tipo de comparação será feita para a ordenação 
-                      //0->media 1->n_usp
+                      //0->media 1-> n_usp
 
     public Aluno(int n_usp, float notas[])  {
-
 
         //Verifica se o tamanho do numero usp esta adequado
         if(Integer.toString(n_usp).length() != 7){

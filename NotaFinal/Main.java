@@ -3,9 +3,9 @@ public class Main{
 public static void main(String[] args){
 Disciplina disciplina = new Disciplina("scc1334");
 float notas[] = new float[3];
-notas[0] = 11;
+notas[0] = 10;
 notas[1] = 2;
-notas[2] = 5;
+notas[2] = 11;
 
 float notas1[] = new float[3];
 notas1[0] = 1;
