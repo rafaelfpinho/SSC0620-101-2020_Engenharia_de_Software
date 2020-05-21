@@ -18,7 +18,7 @@ float notas[] = new float[3];
 //disciplina.imprimirEstudantesDecrescente();
 //disciplina.imprimirEstudantesMedias();
 //disciplina.imprimirAprovados();
-/*
+
     int caso;
     boolean var = true;
     Scanner entrada = new Scanner(System.in);
@@ -142,8 +142,8 @@ float notas[] = new float[3];
         else if(lista_reprovados == 1){
 	        disciplina.ListaReprovados();
         }*/
-    //}
-    //entrada.close();
+    }
+    entrada.close();
     
-}
+    }
 }

@@ -42,14 +42,13 @@ public class Disciplina{
         while (it1.hasNext()) {
             it1.next().setFlag(1);    
         }
-        Collections.sort(estudantes, Collections.reverseOrder());
 
+        Collections.sort(estudantes, Collections.reverseOrder());
         Iterator<Aluno> it = estudantes.iterator();
         while (it.hasNext()) {
             System.out.println(it.next().getNusp());
         }
     }
-
 
     public void imprimirEstudantesMedias(){
         Iterator<Aluno> it1 = estudantes.iterator();
