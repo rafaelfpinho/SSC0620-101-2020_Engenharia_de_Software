@@ -38,8 +38,12 @@ float notas[] = new float[3];
                 System.out.println("Digite a nota da P3:");
                 linha = entrada.next();
                 notas[2] = Float.parseFloat(linha);
-                Aluno aluno = new Aluno(nusp,notas);
-                disciplina.adicionarEstudantes(aluno);
+		try{
+		    disciplina.adicionarEstudantes(new Aluno(nusp,notas));
+
+		}catch(IllegalArgumentException e){
+		    System.out.println(e.getMessage());
+		}
                 break;
             case 3:
                 System.out.println(disciplina.alunosMatriculados());
