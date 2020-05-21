@@ -78,7 +78,7 @@ public class DisciplinaTests {
         notas[0] = 8;
         notas[1] = 5;
         notas[2] = 6;
-        Aluno aluno = new Aluno(10276974, notas);
+        Aluno aluno = new Aluno(1027697, notas);
 
         result = disciplina.adicionarEstudantes(aluno);
         assertEquals(valido, result);
@@ -91,7 +91,7 @@ public class DisciplinaTests {
         notas[0] = 8;
         notas[1] = 5;
         notas[2] = 6;
-        Aluno aluno = new Aluno(10276974, notas);
+        Aluno aluno = new Aluno(1027697, notas);
 
 
         disciplina.adicionarEstudantes(aluno);
@@ -111,14 +111,14 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);
 
         disciplina.imprimirEstudantesDecrescente();
-        assertEquals("90276980\n10276974\n", outContent.toString( ));
+        assertEquals("9027698\n1027697\n", outContent.toString( ));
     }
 
     @Test
@@ -133,8 +133,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois); 
@@ -155,14 +155,14 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois); 
 
         disciplina.imprimirAprovados( );
-        assertEquals("90276980 10.0\n", outContent.toString( ));
+        assertEquals("9027698 10.0\n", outContent.toString( ));
     }
 
     @Test
@@ -177,14 +177,14 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
 
         disciplina.imprimirReprovados( );
-        assertEquals("10276974 1.0\n", outContent.toString( ));
+        assertEquals("1027697 1.0\n", outContent.toString( ));
     }
 
     @Test
@@ -199,8 +199,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois); 
@@ -221,8 +221,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 2;
         notas_aluno_dois[2] = 2;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
@@ -243,8 +243,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
@@ -265,8 +265,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
@@ -293,8 +293,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 10;
         notas_aluno_dois[2] = 10;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
@@ -333,8 +333,8 @@ public class DisciplinaTests {
         notas_aluno_dois[1] = 2;
         notas_aluno_dois[2] = 3;
 
-        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
-        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+        Aluno aluno_um = new Aluno(1027697, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(9027698, notas_aluno_dois);
 
         disciplina.adicionarEstudantes(aluno_um);
         disciplina.adicionarEstudantes(aluno_dois);  
