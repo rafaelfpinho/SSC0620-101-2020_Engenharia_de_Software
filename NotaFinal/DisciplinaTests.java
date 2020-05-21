@@ -101,104 +101,176 @@ public class DisciplinaTests {
 
     @Test
     public void casoTeste9 () {
-        float notas[] = new float[3];
-        notas[0] = 8;
-        notas[1] = 5;
-        notas[2] = 6;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);
+
         disciplina.imprimirEstudantesDecrescente();
-        assertEquals("100\n", outContent.toString( ));
+        assertEquals("90276980\n10276974\n", outContent.toString( ));
     }
 
     @Test
     public void casoTeste10 () {
-        float notas[] = new float[3];
-        notas[0] = 5;
-        notas[1] = 5;
-        notas[2] = 5;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois); 
+
         disciplina.imprimirEstudantesMedias( );
-        assertEquals("5.0\n", outContent.toString( ));
+        assertEquals("10.0\n1.0\n", outContent.toString( ));
     }
 
     @Test
     public void casoTeste11 () {
-        float notas[] = new float[3];
-        notas[0] = 5;
-        notas[1] = 5;
-        notas[2] = 5;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois); 
+
         disciplina.imprimirAprovados( );
-        assertEquals("100 5.0\n", outContent.toString( ));
+        assertEquals("90276980 10.0\n", outContent.toString( ));
     }
 
     @Test
     public void casoTeste12 () {
-        float notas[] = new float[3];
-        notas[0] = 4;
-        notas[1] = 4;
-        notas[2] = 4;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
         disciplina.imprimirReprovados( );
-        assertEquals("100 4.0\n", outContent.toString( ));
+        assertEquals("10276974 1.0\n", outContent.toString( ));
     }
 
     @Test
     public void casoTeste13 () {
-        float notas[] = new float[3];
-        notas[0] = 6;
-        notas[1] = 6;
-        notas[2] = 6;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois); 
+
         tamanho = disciplina.aprovados();
         assertEquals(1, tamanho);
     }
 
     @Test
     public void casoTeste14 () {
-        float notas[] = new float[3];
-        notas[0] = 3;
-        notas[1] = 3;
-        notas[2] = 2;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 2;
+        notas_aluno_dois[1] = 2;
+        notas_aluno_dois[2] = 2;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
         tamanho = disciplina.aprovados();
         assertEquals(0, tamanho);
     }
 
     @Test
     public void casoTeste15 () {
-        float notas[] = new float[3];
-        notas[0] = 4;
-        notas[1] = 4;
-        notas[2] = 4;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 1;
+        notas_aluno_um[1] = 1;
+        notas_aluno_um[2] = 1;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
         tamanho = disciplina.reprovados();
         assertEquals(1, tamanho);
     }
 
     @Test
     public void casoTeste16 () {
-        float notas[] = new float[3];
-        notas[0] = 10;
-        notas[1] = 9;
-        notas[2] = 8;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 9;
+        notas_aluno_um[1] = 9;
+        notas_aluno_um[2] = 9;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
         tamanho = disciplina.reprovados();
         assertEquals(0, tamanho);
     }
@@ -211,13 +283,22 @@ public class DisciplinaTests {
 
     @Test
     public void casoTeste18 () {
-        float notas[] = new float[3];
-        notas[0] = 10;
-        notas[1] = 10;
-        notas[2] = 9;
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 9;
+        notas_aluno_um[1] = 9;
+        notas_aluno_um[2] = 9;
 
-        Aluno aluno = new Aluno(100, notas);
-        disciplina.adicionarEstudantes(aluno);
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 10;
+        notas_aluno_dois[1] = 10;
+        notas_aluno_dois[2] = 10;
+
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
         disciplina.imprimirReprovados( );
         assertEquals("", outContent.toString( ));
     }
@@ -240,8 +321,26 @@ public class DisciplinaTests {
         assertEquals("", outContent.toString( ));
     }
 
+    @Test
+    public void casoTeste22 () {
+        float notas_aluno_um[] = new float[3];
+        notas_aluno_um[0] = 0;
+        notas_aluno_um[1] = 0;
+        notas_aluno_um[2] = 1;
 
-    
+        float notas_aluno_dois[] = new float[3];
+        notas_aluno_dois[0] = 1;
+        notas_aluno_dois[1] = 2;
+        notas_aluno_dois[2] = 3;
 
+        Aluno aluno_um = new Aluno(10276974, notas_aluno_um);
+        Aluno aluno_dois = new Aluno(90276980, notas_aluno_dois);
+
+        disciplina.adicionarEstudantes(aluno_um);
+        disciplina.adicionarEstudantes(aluno_dois);  
+
+        disciplina.imprimirAprovados( );
+        assertEquals("", outContent.toString( ));
+    }
 }
   
