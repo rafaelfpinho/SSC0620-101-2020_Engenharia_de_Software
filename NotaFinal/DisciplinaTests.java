@@ -10,7 +10,7 @@ import java.io.PrintStream;
 public class DisciplinaTests {
 
     //variáveis globais da classe de teste
-    Disciplina identifier;
+    Disciplina disciplina;
     boolean valido = true;
     boolean invalido = false;
     boolean result = true;
@@ -24,7 +24,7 @@ public class DisciplinaTests {
     //Metodo que é sempre executado antes de executar cada teste
     @Before
     public void init(){
-        identifier = new Disciplina("SSC0620");
+        disciplina = new Disciplina("SSC0620");
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
@@ -37,31 +37,31 @@ public class DisciplinaTests {
     /* Implementação do caso de teste < a52589, ID válido > [limite inferior] */
     @Test
     public void casoTeste1 (){
-        result = identifier.setCodigo("SSC0620");
+        result = disciplina.setCodigo("SSC0620");
         assertEquals(valido, result);
     }
 
     @Test
     public void casoTeste2 (){
-        result = identifier.setCodigo("SSCC000");
+        result = disciplina.setCodigo("SSCC000");
         assertEquals(invalido, result);
     }
 
     @Test
     public void casoTeste3 (){
-        result = identifier.setCodigo("SSC620");
+        result = disciplina.setCodigo("SSC620");
         assertEquals(invalido, result);
     }
 
     @Test
     public void casoTeste4 (){
-        result = identifier.setCodigo("SSS0620");
+        result = disciplina.setCodigo("SSS0620");
         assertEquals(invalido, result);
     }
 
     @Test
     public void casoTeste5 (){
-        result = identifier.setCodigo("SSC00620");
+        result = disciplina.setCodigo("SSC00620");
         assertEquals(invalido, result);
     }
 
@@ -74,7 +74,7 @@ public class DisciplinaTests {
         notas[2] = 6;
         Aluno aluno = new Aluno(10276974, notas);
 
-        result = identifier.adicionarEstudantes(aluno);
+        result = disciplina.adicionarEstudantes(aluno);
         assertEquals(valido, result);
     }
 
@@ -88,8 +88,8 @@ public class DisciplinaTests {
         Aluno aluno = new Aluno(10276974, notas);
 
 
-        identifier.adicionarEstudantes(aluno);
-        tamanho = identifier.alunosMatriculados();
+        disciplina.adicionarEstudantes(aluno);
+        tamanho = disciplina.alunosMatriculados();
         assertEquals(1, tamanho);
     }
 
@@ -101,8 +101,8 @@ public class DisciplinaTests {
         notas[2] = 6;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        identifier.imprimirEstudantesDecrescente();
+        disciplina.adicionarEstudantes(aluno);
+        disciplina.imprimirEstudantesDecrescente();
         assertEquals("100\n", outContent.toString( ));
     }
 
@@ -114,8 +114,8 @@ public class DisciplinaTests {
         notas[2] = 5;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        identifier.imprimirEstudantesMedias( );
+        disciplina.adicionarEstudantes(aluno);
+        disciplina.imprimirEstudantesMedias( );
         assertEquals("5.0\n", outContent.toString( ));
     }
 
@@ -127,8 +127,8 @@ public class DisciplinaTests {
         notas[2] = 5;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        identifier.imprimirAprovados( );
+        disciplina.adicionarEstudantes(aluno);
+        disciplina.imprimirAprovados( );
         assertEquals("100 5.0\n", outContent.toString( ));
     }
 
@@ -140,8 +140,8 @@ public class DisciplinaTests {
         notas[2] = 4;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        identifier.imprimirReprovados( );
+        disciplina.adicionarEstudantes(aluno);
+        disciplina.imprimirReprovados( );
         assertEquals("100 4.0\n", outContent.toString( ));
     }
 
@@ -153,8 +153,8 @@ public class DisciplinaTests {
         notas[2] = 6;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        tamanho = identifier.aprovados();
+        disciplina.adicionarEstudantes(aluno);
+        tamanho = disciplina.aprovados();
         assertEquals(1, tamanho);
     }
 
@@ -166,8 +166,8 @@ public class DisciplinaTests {
         notas[2] = 2;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        tamanho = identifier.aprovados();
+        disciplina.adicionarEstudantes(aluno);
+        tamanho = disciplina.aprovados();
         assertEquals(0, tamanho);
     }
 
@@ -179,8 +179,8 @@ public class DisciplinaTests {
         notas[2] = 4;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        tamanho = identifier.reprovados();
+        disciplina.adicionarEstudantes(aluno);
+        tamanho = disciplina.reprovados();
         assertEquals(1, tamanho);
     }
 
@@ -192,9 +192,46 @@ public class DisciplinaTests {
         notas[2] = 8;
 
         Aluno aluno = new Aluno(100, notas);
-        identifier.adicionarEstudantes(aluno);
-        tamanho = identifier.reprovados();
+        disciplina.adicionarEstudantes(aluno);
+        tamanho = disciplina.reprovados();
         assertEquals(0, tamanho);
+    }
+
+    @Test
+    public void casoTeste16() {
+        disciplina.imprimirReprovados( );
+        assertEquals("", outContent.toString( ));
+    }
+
+    @Test
+    public void casoTeste17() {
+        float notas[] = new float[3];
+        notas[0] = 10;
+        notas[1] = 10;
+        notas[2] = 9;
+
+        Aluno aluno = new Aluno(100, notas);
+        disciplina.adicionarEstudantes(aluno);
+        disciplina.imprimirReprovados( );
+        assertEquals("", outContent.toString( ));
+    }
+
+    @Test
+    public void casoTeste18() {
+        disciplina.imprimirEstudantesDecrescente();
+        assertEquals("", outContent.toString( ));
+    }
+
+    @Test
+    public void casoTeste19() {
+        disciplina.imprimirEstudantesMedias( );
+        assertEquals("", outContent.toString( ));
+    }
+
+    @Test
+    public void casoTeste20() {
+        disciplina.imprimirAprovados( );
+        assertEquals("", outContent.toString( ));
     }
 
 
